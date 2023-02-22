@@ -1,18 +1,13 @@
 name: Cypress Tests
-  
+
 on: [pull_request]
   
-jobs: 
-  name: Cypress Tests With Chrome
-  runs-on: ubuntu-latest
-  steps: 
-      - name: Git Checkout 
-        uses: uses: actions/checkout@v3.3.0
-      
-      - name: Install Dependencies
-        run: yarn install
-      
-      - name: Run E2E tests
-        run: yarn cypress run
-    
-    
+jobs:
+  Run Tests With Chrome
+  steps:
+    - name: Git Checkout
+      uses: actions/checkout@v3.3.0
+    - name: Install Dependencies
+      run: yarn install 
+    - name: Run E2E Tests 
+      run: yarn cypress run
