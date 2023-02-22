@@ -16,7 +16,7 @@ jobs:
       - name: Run Tests In Cloud
         uses: cypress-io/github-action@v5.0.9
         with: 
-          command-install: yarn install
+          install-command: yarn install
           record: true
           parallel: true
           browser: chrome
@@ -37,7 +37,7 @@ jobs:
       - name: Run Tests In Cloud
         uses: cypress-io/github-action@v5.0.9
         with: 
-          command-install: yarn install
+          install-command: yarn install
           record: true
           parallel: true
           browser: electron
