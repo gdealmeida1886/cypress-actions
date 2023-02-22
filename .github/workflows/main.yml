@@ -4,11 +4,11 @@ on: [pull_request]
   
 jobs:
   run-chrome-tests:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Git Checkout
-      uses: actions/checkout@v3.3.0
-    - name: Install Dependencies
-      run: yarn install 
-    - name: Run E2E Tests 
-      run: yarn cypress run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v3.3.0
+      - name: Install Dependencies
+        run: yarn install 
+      - name: Run E2E Tests 
+        run: yarn cypress run
