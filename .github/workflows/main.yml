@@ -3,7 +3,8 @@ name: Cypress Tests
 on: [pull_request]
   
 jobs:
-  Run Tests With Chrome
+  run-chrome-tests:
+  runs-on: ubuntu-latest
   steps:
     - name: Git Checkout
       uses: actions/checkout@v3.3.0
