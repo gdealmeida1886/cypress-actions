@@ -9,7 +9,7 @@ jobs:
       matrix:
         containers: [1, 2, 3] 
     container:
-      image: cypress/base:12
+      image: node-18.14.1-chrome-110.0.5481.96-1-ff-109.0-edge-110.0.1587.41-1
     steps:
       - name: Git Checkout
         uses: actions/checkout@v3.3.0
@@ -30,7 +30,7 @@ jobs:
       matrix:
         containers: [1, 2, 3] 
     container:
-      image: cypress/base:12
+      image: node-18.14.1-chrome-110.0.5481.96-1-ff-109.0-edge-110.0.1587.41-1
     steps:
       - name: Git Checkout
         uses: actions/checkout@v3.3.0
