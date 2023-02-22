@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy: 
       matrix:
-        containers: [1, 2] 
+        containers: [1, 2, 3] 
     steps:
       - name: Git Checkout
         uses: actions/checkout@v3.3.0
