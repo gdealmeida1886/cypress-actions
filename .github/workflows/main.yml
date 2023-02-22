@@ -14,8 +14,10 @@ jobs:
       - name: Run Tests In Cloud
         uses: cypress-io/github-action@v5.0.9
         with: 
+          commqnd-install: yarn install
           record: true
           parallel: true
+          browser: electron, chrome
         env:
           CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
           
