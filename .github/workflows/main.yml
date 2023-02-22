@@ -8,7 +8,11 @@ jobs:
     steps:
       - name: Git Checkout
         uses: actions/checkout@v3.3.0
-      - name: Install Dependencies
-        run: yarn install 
-      - name: Run E2E Tests 
-        run: yarn cypress run
+      - name: Run Tests In Cloud
+        uses: cypress-io/github-action@v5.0.9
+        with: 
+          record: true
+          parallel: true
+        env:
+          CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
+          
